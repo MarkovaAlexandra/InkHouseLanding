@@ -1,0 +1,115 @@
+@import 'vars';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Raleway', sans-serif;
+}
+
+main {
+    flex: 1
+}
+
+header {
+    background-color: $backgroundColor;
+}
+
+.center {
+    padding-right: calc(50% - 550px);
+    padding-left: calc(50% - 550px);
+}
+
+.header__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 33px;
+    padding-bottom: 33px;
+
+    &__right {
+        display: flex;
+        gap: 60px;
+        align-items: center;
+
+
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+    }
+}
+
+.logo {
+    color: $textGreen;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.nav__link {
+    color: $textDark;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.hero__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 70px;
+
+}
+
+.hero__heading {
+    color: $textDark;
+    margin-bottom: 20px;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+}
+
+.green {
+    color: $textGreen;
+}
+
+.hero__text {
+    margin-bottom: 60px;
+    color: $textLight;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.hero__button {
+    padding: 1rem 3rem;
+    border: 1px solid $textGreen;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: $textGreen;
+}
+
+.catalog__title {
+    display: flex;
+}
