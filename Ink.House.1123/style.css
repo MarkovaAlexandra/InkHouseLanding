@@ -1,52 +1,85 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-}
-
-a {
   text-decoration: none;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  list-style: none;
   font-family: "Raleway", sans-serif;
 }
 
-main {
-  flex: 1;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-header {
-  background-color: #D4E8D9;
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 0 8px;
+}
+@media (max-width: 690px) {
+  .container {
+    max-width: 690px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 510px) {
+  .container {
+    max-width: 510px;
+    margin: 0 auto;
+  }
 }
 
-.center {
-  padding-right: calc(50% - 550px);
-  padding-left: calc(50% - 550px);
+.header {
+  background-color: #E1EDE6;
 }
 
-.header__box {
+.header-content {
   display: flex;
+  height: 100px;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  padding-top: 33px;
-  padding-bottom: 33px;
 }
-.header__box__right {
-  display: flex;
-  gap: 60px;
-  align-items: center;
+@media (max-width: 510px) {
+  .header-content {
+    height: 123px;
+    flex-direction: column;
+    justify-content: space-around;
+  }
 }
-.header__box__left {
+.header-content__logo {
   display: flex;
   align-items: center;
   gap: 8px;
 }
+.header-content__menu {
+  display: flex;
+  gap: 60px;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+@media (max-width: 590px) {
+  .header-content__menu {
+    gap: 30px;
+  }
+}
+@media (max-width: 510px) {
+  .header-content__menu {
+    gap: 60px;
+  }
+}
+@media (max-width: 510px) {
+  .header-content__menu::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #C3D1C6;
+  }
+}
 
-.logo {
+.logo__text {
   color: #598D66;
   font-size: 20px;
   font-style: normal;
@@ -54,54 +87,124 @@ header {
   line-height: normal;
 }
 
-.nav__link {
+.menu__link {
   color: #2C2D35;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  display: block;
+}
+@media (max-width: 690px) {
+  .menu__link {
+    font-size: 18px;
+  }
 }
 
-.hero__content {
+.img-norender {
+  width: 22px;
+  height: 22px;
+}
+
+.about-body {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 30px;
   margin-bottom: 70px;
 }
+@media (max-width: 510px) {
+  .about-body {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
 
-.hero__heading {
+.about__image {
+  width: 50%;
+}
+@media (max-width: 510px) {
+  .about__image {
+    width: 41%;
+  }
+}
+.about__descr {
+  width: 50%;
+}
+@media (max-width: 510px) {
+  .about__descr {
+    width: 59%;
+  }
+}
+.about__title {
   color: #2C2D35;
-  margin-bottom: 20px;
+  font-family: Raleway;
   font-size: 60px;
   font-style: normal;
   font-weight: 500;
   line-height: 110%;
+  margin: 0 0 20px 0;
 }
-
-.green {
-  color: #598D66;
+@media (max-width: 690px) {
+  .about__title {
+    font-size: 40px;
+  }
 }
-
-.hero__text {
-  margin-bottom: 60px;
+@media (max-width: 510px) {
+  .about__title {
+    font-size: 36px;
+    margin: 0 0 10px 0;
+    line-height: 100%;
+  }
+}
+.about__text {
   color: #86928B;
-  font-size: 17px;
+  font-family: Raleway;
+  font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: 150%;
+  /* 27px */
+  margin: 0 0 60px 0;
 }
-
-.hero__button {
-  padding: 1rem 3rem;
+@media (max-width: 690px) {
+  .about__text {
+    margin: 0 0 40px 0;
+  }
+}
+@media (max-width: 510px) {
+  .about__text {
+    font-size: 16px;
+    margin: 0 0 10px 0;
+  }
+}
+.about__button {
+  display: inline-flex;
+  height: 65px;
+  padding: 20px 60px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
   border: 1px solid #598D66;
+  color: #598D66;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  color: #598D66;
+}
+@media (max-width: 690px) {
+  .about__button {
+    height: 60px;
+    padding: 20px 50px;
+  }
+}
+@media (max-width: 510px) {
+  .about__button {
+    font-size: 18px;
+    height: 50px;
+    padding: 20 50px;
+  }
 }
 
-.catalog__title {
-  display: flex;
+.green {
+  color: #598D66;
 }/*# sourceMappingURL=style.css.map */
